@@ -26,16 +26,27 @@ public class TPCHTest {
 			sessionFactory = SessionFactoryRegistry.getSessionFactory();
 			session = sessionFactory.openSession();
 			transaction = session.beginTransaction();
-			
-			
-			payment = new Payment();
-			payment.setAmount(2250);
-			payment.setDescription("Loan EMI");
-			payment.setPaymentDate(new Date());
 
-			session.save(payment);
-			System.out.println(payment);
-
+			/*
+			 * 1.Added data to Payment entity class and Discriminator value is also got
+			 * added
+			 * 
+			 */
+			/*
+			 * payment = new Payment(); payment.setAmount(2250);
+			 * payment.setDescription("Loan EMI"); payment.setPaymentDate(new Date());
+			 * 
+			 * session.save(payment); System.out.println(payment);
+			 */
+			
+			/*
+			 * 2.Feteched super class data using its id and hibernate not using
+			 * discriminator column
+			 */
+			/*
+			 * payment = session.get(Payment.class, 1); System.out.println(payment);
+			 */
+			
 			flag = true;
 		} finally {
 			if (flag) {
