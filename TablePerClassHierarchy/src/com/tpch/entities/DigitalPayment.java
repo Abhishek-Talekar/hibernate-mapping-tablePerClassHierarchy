@@ -37,7 +37,9 @@ public class DigitalPayment extends Payment {
 	@Override
 	public String toString() {
 		return "DigitalPayment [transactionNumber=" + transactionNumber + ", partnerName=" + partnerName + ", note="
-				+ note + ", creditedDate=" + creditedDate + "]";
+				+ note + ", creditedDate=" + creditedDate + ", paymentId=" + paymentId + ", description=" + description
+				+ ", paymentDate=" + paymentDate + ", amount=" + amount + "]";
 	}
+	
 	
 }
