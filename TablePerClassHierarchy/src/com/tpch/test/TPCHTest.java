@@ -47,6 +47,20 @@ public class TPCHTest {
 			 * payment = session.get(Payment.class, 1); System.out.println(payment);
 			 */
 			
+			/*
+			 * 3.Inserted data using chequePayment subclass and super class data is also got
+			 * added so achieved polymorphic insertion
+			 */
+			/*
+			 * chequePayment = new ChequePayment(); chequePayment.setAmount(4400);
+			 * chequePayment.setDescription("Bike rent"); chequePayment.setPaymentDate(new
+			 * Date()); chequePayment.setBankName("SBI Bank");
+			 * chequePayment.setChequeDate(new Date()); chequePayment.setChequeNo(12345);
+			 * chequePayment.setIfsc("SBIN12456");
+			 * 
+			 * session.save(chequePayment); System.out.println(chequePayment);
+			 */
+			
 			flag = true;
 		} finally {
 			if (flag) {
