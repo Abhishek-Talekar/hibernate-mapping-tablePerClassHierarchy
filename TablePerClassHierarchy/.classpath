@@ -4,5 +4,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/HIB 5.4"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/MySQLConn"/>
+	<classpathentry kind="lib" path="D:/Users/abhi/Downloads/lombok.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
