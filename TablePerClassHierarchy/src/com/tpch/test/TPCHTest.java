@@ -69,7 +69,22 @@ public class TPCHTest {
 			 * chequePayment = session.get(ChequePayment.class, 2);
 			 * System.out.println(chequePayment);
 			 */
-
+			
+			/*
+			 * 5.Inserted data using digitalPayment subclass and super class data is also got
+			 * added so achieved polymorphic insertion
+			 */
+			/*
+			 * digitalPayment = new DigitalPayment(); digitalPayment.setAmount(5500);
+			 * digitalPayment.setDescription("Donation to welfare");
+			 * digitalPayment.setPaymentDate(new Date()); digitalPayment.setCreditedDate(new
+			 * Date()); digitalPayment.setNote("Rular Education System donation");
+			 * digitalPayment.setPartnerName("Google Pay");
+			 * digitalPayment.setTransactionNumber(8912671);
+			 * 
+			 * session.save(digitalPayment); System.out.println(digitalPayment);
+			 */
+			
 			flag = true;
 		} finally {
 			if (flag) {
