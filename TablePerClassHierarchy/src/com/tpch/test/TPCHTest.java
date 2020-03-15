@@ -38,7 +38,7 @@ public class TPCHTest {
 			 * 
 			 * session.save(payment); System.out.println(payment);
 			 */
-			
+
 			/*
 			 * 2.Feteched super class data using its id and hibernate not using
 			 * discriminator column
@@ -46,7 +46,7 @@ public class TPCHTest {
 			/*
 			 * payment = session.get(Payment.class, 1); System.out.println(payment);
 			 */
-			
+
 			/*
 			 * 3.Inserted data using chequePayment subclass and super class data is also got
 			 * added so achieved polymorphic insertion
@@ -61,6 +61,15 @@ public class TPCHTest {
 			 * session.save(chequePayment); System.out.println(chequePayment);
 			 */
 			
+			/*
+			 * 4.Fetched the subclass data and also got the super class payment data as it's
+			 * creating where clause using discriminator column
+			 */			
+			/*
+			 * chequePayment = session.get(ChequePayment.class, 2);
+			 * System.out.println(chequePayment);
+			 */
+
 			flag = true;
 		} finally {
 			if (flag) {
