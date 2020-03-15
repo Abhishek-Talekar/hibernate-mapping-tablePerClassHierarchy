@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tpch.entities">
+	<subclass name="ChequePayment" extends="com.tpch.entities.Payment" discriminator-value="cheque">
+		<property name="bankName" column="bank_name" />
+		<property name="chequeNo" column="cheque_number" />
+		<property name="chequeDate" column="cheque_date" />
+		<property name="ifsc" />
+	</subclass>
+</hibernate-mapping>

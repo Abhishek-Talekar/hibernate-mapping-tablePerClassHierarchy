@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tpch.entities">
+	<subclass name="DigitalPayment"
+		extends="com.tpch.entities.Payment"
+		discriminator-value="digitalPayment">
+		<property name="transactionNumber" column="tx_no" />
+		<property name="creditedDate" column="credited_date" />
+		<property name="note" />
+		<property name="partnerName" column="partner_name" />
+	</subclass>
+</hibernate-mapping>
