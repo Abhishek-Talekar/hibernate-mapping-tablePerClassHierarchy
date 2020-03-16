@@ -60,19 +60,19 @@ public class TPCHTest {
 			 * 
 			 * session.save(chequePayment); System.out.println(chequePayment);
 			 */
-			
+
 			/*
 			 * 4.Fetched the subclass data and also got the super class payment data as it's
 			 * creating where clause using discriminator column
-			 */			
+			 */
 			/*
 			 * chequePayment = session.get(ChequePayment.class, 2);
 			 * System.out.println(chequePayment);
 			 */
-			
+
 			/*
-			 * 5.Inserted data using digitalPayment subclass and super class data is also got
-			 * added so achieved polymorphic insertion
+			 * 5.Inserted data using digitalPayment subclass and super class data is also
+			 * got added so achieved polymorphic insertion
 			 */
 			/*
 			 * digitalPayment = new DigitalPayment(); digitalPayment.setAmount(5500);
@@ -84,7 +84,21 @@ public class TPCHTest {
 			 * 
 			 * session.save(digitalPayment); System.out.println(digitalPayment);
 			 */
-			
+
+			/*
+			 * 6.Fetched the subclass data and also got the super class payment data as it's
+			 * creating where clause using discriminator column so achived polymorphic
+			 * retrival
+			 */
+			/*
+			 * digitalPayment = session.get(DigitalPayment.class, 3);
+			 * System.out.println(digitalPayment);
+			 */
+
+//			7.Fetched subclass data using superclass where it is creating query only with super class id not relating with dicriminator value
+			payment = session.get(Payment.class, 3);
+			System.out.println(payment);
+
 			flag = true;
 		} finally {
 			if (flag) {
